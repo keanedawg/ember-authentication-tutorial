@@ -4,9 +4,14 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'blog',
+    podModulePrefix: 'blog/features',
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: 'https://test-46b52.firebaseio.com/',  
+    torii: {  
+      sessionServiceName: 'session'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
