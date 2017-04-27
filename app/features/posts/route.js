@@ -33,28 +33,28 @@ export default Ember.Route.extend({
            user.then((userData)=>{
                userData.get('comments').addObject(comment);
                post.get('comments').addObject(comment);
-               console.log('test');
+     //          console.log('test');
                return comment.save().then(()=>{
-                                        console.log('comment saved succesfully');
+                         //               console.log('comment saved succesfully');
                                         return post.save();
                                     })
                                     .catch((error)=>{
-                                        console.log(`comment:  ${error}`);
+                       //                 console.log(`comment:  ${error}`);
                                         comment.rollbackAttributes();
                                     })
                                     .then(()=>{
-                                        console.log('post saved successfuly');
+                           //             console.log('post saved successfuly');
                                         return userData.save();
                                     })
                                     .catch((error)=>{
-                                        console.log(`post:  ${error}`);
+                         //               console.log(`post:  ${error}`);
                                         post.rollbackAttributes();
                                     })
                                     .then(()=>{
-                                        console.log('user saved successfuly');
+                         //               console.log('user saved successfuly');
                                     })
                                     .catch((error)=>{
-                                        console.log(`user:  ${error}`);
+                            //            console.log(`user:  ${error}`);
                                         user.rollbackAttributes();
                                     });
 

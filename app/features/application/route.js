@@ -11,7 +11,7 @@ export default Ember.Route.extend({
     actions:{
         login(){
             get(this,'session').open('firebase', { provider: 'twitter'}).then(function(data) {
-                            console.log(data);
+                        //    console.log(data);
                   });
         },
         logout(){

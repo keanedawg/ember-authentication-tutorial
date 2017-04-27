@@ -1,14 +1,18 @@
-/* eslint-env node */
-'use strict';
+/* jshint node: true */
 
 module.exports = function(environment) {
-  let ENV = {
-    modulePrefix: 'blog',
-    podModulePrefix: 'blog/features',
-    environment,
-    rootURL: '/',
+  var ENV = {
+    modulePrefix: 'example1',
+    podModulePrefix: 'example1/features',
+    environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://testemberfire.firebaseio.com/',		
+	  torii: {		
+		  sessionServiceName: 'session'		
+	  },	
+    baseURL: '/',	
     locationType: 'auto',
-    firebase: 'https://test-46b52.firebaseio.com/',  
+    firebase: 'https://testemberfire.firebaseio.com/',  
     torii: {  
       sessionServiceName: 'session'
     },
@@ -16,10 +20,6 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
-      },
-      EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false
       }
     },
 
@@ -39,6 +39,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
+    ENV.baseURL = '/',
     ENV.locationType = 'none';
 
     // keep test console output quieter
