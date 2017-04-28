@@ -10,7 +10,7 @@ module.exports = function(environment) {
 	  torii: {		
 		  sessionServiceName: 'session'		
 	  },	
-    baseURL: '/',	
+    rootURL: '/',	
     locationType: 'auto',
     firebase: 'https://testemberfire.firebaseio.com/',  
     torii: {  
@@ -39,7 +39,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/',
+    ENV.rootURL = '/',
     ENV.locationType = 'none';
 
     // keep test console output quieter
