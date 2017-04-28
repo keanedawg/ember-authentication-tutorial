@@ -1,7 +1,13 @@
-# blog
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+# Ember Authentication Tutorial. 
+
+This tutorial was meant to follow this tutorial here.
+
+http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/
+
+But I've had a lot of configuration errors along the way. I suspect the tutorial is
+just a little old.
 
 ## Prerequisites
 
