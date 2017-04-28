@@ -6,13 +6,17 @@ module.exports = function(environment) {
     podModulePrefix: 'blog/features',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://testemberfire.firebaseio.com/',		
+    firebase: {
+      // apiKey: 'xyz',
+      authDomain: 'testemberfire.firebaseapp.com',
+      databaseURL: 'https://testemberfire.firebaseio.com',
+      storageBucket: 'testemberfire.appspot.com',
+    },		
 	  torii: {		
 		  sessionServiceName: 'session'		
 	  },	
     rootURL: '/',	
-    locationType: 'auto',
-    firebase: 'https://testemberfire.firebaseio.com/',  
+    locationType: 'auto',  
     torii: {  
       sessionServiceName: 'session'
     },
