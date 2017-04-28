@@ -2,7 +2,7 @@
 
 # Ember Authentication Tutorial. 
 
-This tutorial was meant to follow this tutorial here.
+This repository is build to follow this tutorial here.
 
 http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/
 
